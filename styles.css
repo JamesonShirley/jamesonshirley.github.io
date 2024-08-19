@@ -1,0 +1,198 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+    background-color: #333;
+    padding: 1rem 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.navbar a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+#theme-toggle {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #fff;
+    color: #333;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#theme-toggle:hover {
+    background-color: #ddd;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1rem;
+}
+
+
+/* Resume Section */
+.resume h2, .projects h2, .skills h2, .certifications h2, .contact h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.resume section, .projects section, .skills section, .certifications section, .contact section {
+    margin-bottom: 2rem;
+}
+
+.job h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.job ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+/* Projects Section */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.project {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.project h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+
+body.dark-mode .contact-form input, 
+body.dark-mode .contact-form textarea {
+    background-color: #333;
+    color: #ddd;
+    border-color: #555;
+}
+
+body.dark-mode .contact-form input[type="submit"] {
+    background-color: #555;
+}
+
+body.dark-mode .contact-form input[type="submit"]:hover {
+    background-color: #666;
+}
+
+
+.intro {
+    text-align: left;
+    margin-top: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.intro p {
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #333; /* Adjust color if necessary for dark mode */
+}
+
+body.dark-mode .intro p {
+    color: #f5f5f5; /* Adjust for dark mode */
+}
+
+
+/* Social Links */
+.social-links a {
+    margin: 0 0.5rem;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Dark Mode - Social Links */
+body.dark-mode .social-links a {
+    color: #f5f5f5; /* Brighter color for dark mode */
+}
+
+body.dark-mode .social-links a:hover {
+    color: #ffcc00; /* Accent color on hover for better visibility */
+}
