@@ -38,14 +38,14 @@ header {
 #theme-toggle {
     padding: 0.5rem 1rem;
     border: none;
-    background-color: #fff;
-    color: #333;
+    background-color: #888; /* Gray color */
+    color: #fff;
     border-radius: 5px;
     cursor: pointer;
 }
 
 #theme-toggle:hover {
-    background-color: #ddd;
+    background-color: #aaa; /* Lighter gray on hover */
 }
 
 main {
