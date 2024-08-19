@@ -8,17 +8,12 @@
 
 /* Style for the current page link */
 .current-page {
-    text-decoration: underline !important; /* Ensure underline is applied */
     cursor: default;
     pointer-events: none; /* Disable clicking */
     color: #bbb; /* Make the color slightly different if desired */
     font-weight: bold; /* Optional: Make it stand out more */
-}
-
-/* Optional: Different hover style for current page */
-.current-page:hover {
-    background-color: transparent; /* No hover effect */
-    text-decoration: underline; /* Keep the underline on hover */
+    border-bottom: 2px solid #fff; /* Apply underline with border */
+    padding-bottom: 3px; /* Adjust padding to accommodate the border */
 }
 
 body {
@@ -51,24 +46,7 @@ header {
 .navbar a:hover {
     background-color: #555;
     color: #fff;
-}
-
-.navbar a::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: #fff;
-    left: 0;
-    bottom: -5px;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s ease;
-}
-
-.navbar a:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
+    border-bottom: 2px solid #fff; /* Apply underline on hover with border */
 }
 
 #theme-toggle {
