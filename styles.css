@@ -6,6 +6,21 @@
     font-family: 'Arial', sans-serif;
 }
 
+/* Style for the current page link */
+.current-page {
+    text-decoration: underline !important; /* Ensure underline is applied */
+    cursor: default;
+    pointer-events: none; /* Disable clicking */
+    color: #bbb; /* Make the color slightly different if desired */
+    font-weight: bold; /* Optional: Make it stand out more */
+}
+
+/* Optional: Different hover style for current page */
+.current-page:hover {
+    background-color: transparent; /* No hover effect */
+    text-decoration: underline; /* Keep the underline on hover */
+}
+
 body {
     line-height: 1.6;
     color: #333;
@@ -110,7 +125,7 @@ main {
 /* Projects Section */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(2, 1fr));
+    grid-template-columns: repeat(2, 1fr); /* Ensure 2 columns */
     gap: 1rem;
 }
 
