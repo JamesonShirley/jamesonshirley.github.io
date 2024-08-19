@@ -25,15 +25,36 @@ header {
 }
 
 .navbar a {
+    position: relative;
     color: #fff;
     text-decoration: none;
     padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .navbar a:hover {
     background-color: #555;
-    border-radius: 5px;
+    color: #fff;
 }
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.navbar a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
 
 #theme-toggle {
     padding: 0.5rem 1rem;
@@ -195,4 +216,54 @@ body.dark-mode .social-links a {
 
 body.dark-mode .social-links a:hover {
     color: #ffcc00; /* Accent color on hover for better visibility */
+}
+
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+
+button {
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+img {
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+
+.project {
+    transition: box-shadow 0.3s ease;
+}
+
+.project:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+.slide-in {
+    transform: translateX(-100%);
+    animation: slideIn 0.8s ease-out forwards;
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+    }
 }
