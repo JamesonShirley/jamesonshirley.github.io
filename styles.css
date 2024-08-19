@@ -169,9 +169,14 @@ main {
 }
 
 /* Dark Mode */
-body.dark-mode {
+body.dark-mode main,
+body.dark-mode section,
+body.dark-mode div {
     background-color: #121212;
     color: #f5f5f5;
+}
+body, main, section, div {
+    transition: none;
 }
 
 body.dark-mode .contact-form input, 

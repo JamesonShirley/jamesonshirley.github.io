@@ -6,6 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jameson Shirley | Home</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Default background color for light mode */
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        /* Apply dark mode if preferred */
+        body.dark-mode {
+            background-color: #121212;
+            color: #f5f5f5;
+        }
+    </style>
+    <script>
+        // Immediately apply dark mode if it's stored in localStorage
+        (function() {
+            if (localStorage.getItem('theme') === 'dark') {
+                document.documentElement.classList.add('dark-mode');
+                // Apply background color immediately to avoid flash
+                document.documentElement.style.backgroundColor = '#121212';
+                document.documentElement.style.color = '#f5f5f5';
+            }
+        })();
+    </script>
 </head>
 <body class="light-mode">
     <header>
