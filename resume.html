@@ -3,41 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Education and work experience of Jameson Shirley, Senior Software Engineer.">
     <title>Jameson Shirley | Work Experience</title>
-    <link rel="preload" href="styles.css" as="style">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Default background color for light mode */
-        body {
-            background-color: #f5f5f5;
-            color: #333;
-        }
-        /* Apply dark mode if preferred */
-        body.dark-mode {
-            background-color: #121212;
-            color: #f5f5f5;
-        }
-    </style>
     <script>
-        // Immediately apply dark mode if it's stored in localStorage
-        (function() {
-            if (localStorage.getItem('theme') === 'dark') {
-                document.documentElement.classList.add('dark-mode');
-                // Apply background color immediately to avoid flash
-                document.documentElement.style.backgroundColor = '#121212';
-                document.documentElement.style.color = '#f5f5f5';
-            }
-        })();
+        // Apply dark mode before paint to avoid a flash of light theme
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
     </script>
 </head>
-<body class="light-mode">
+<body>
     <header>
         <nav class="navbar">
             <a href="index.html">Home</a>
-            <a href="resume.html" class="current-page">Education & Work Experience</a>
+            <a href="resume.html" class="current-page" aria-current="page">Education &amp; Work Experience</a>
             <a href="projects.html">Projects</a>
-            <a href="skills.html">Skills & Certifications</a>
-            <button id="theme-toggle">Toggle Dark Mode</button>
+            <a href="skills.html">Skills &amp; Certifications</a>
+            <button id="theme-toggle">☾ Dark Mode</button>
         </nav>
     </header>
     <main class="resume">
@@ -50,21 +33,19 @@
         <section class="experience">
             <h2 class="slide-in">Work Experience</h2>
 
-            <div class="job fade-in">
+            <div class="job card fade-in">
                 <h3>Senior Software Engineer | State of Utah | Orem, UT | 05/2022 – Present</h3>
                 <ul>
                     <li>Developed and optimized 5 Java Spring Boot applications on AWS.</li>
-                    <li> Led a full-stack migration from Java Spring Boot/JSP to Python Flask/React, improving backend processes and reducing load times
-                        by 40%.</li>
+                    <li>Led a full-stack migration from Java Spring Boot/JSP to Python Flask/React, improving backend processes and reducing load times by 40%.</li>
                     <li>Containerized Flask apps with Docker for consistent, efficient AWS deployments.</li>
-                    <li>Improved security by integrating AWS Secrets Manager for credential storage and transitioned repositories to GitHub</li>
-                    <li>SAutomated email processes with Python AWS Lambda functions using Pandas, reducing manual workload and increasing team
-                        productivity.</li>
+                    <li>Improved security by integrating AWS Secrets Manager for credential storage and transitioned repositories to GitHub.</li>
+                    <li>Automated email processes with Python AWS Lambda functions using Pandas, reducing manual workload and increasing team productivity.</li>
                     <li>Utilized Jira, GitHub, and GitLab for Agile task management and version control in a high-traffic production environment.</li>
                 </ul>
             </div>
 
-            <div class="job fade-in">
+            <div class="job card fade-in">
                 <h3>Software Engineer | LexisNexis | Orem, UT | 11/2021 – 05/2022</h3>
                 <ul>
                     <li>Developed bug fixes and features on a web application using Python Django and Django Rest Framework.</li>
@@ -72,12 +53,11 @@
                 </ul>
             </div>
 
-            <div class="job fade-in">
+            <div class="job card fade-in">
                 <h3>Software Developer | Tybera Development Group | Orem, UT | 05/2020 – 11/2021</h3>
                 <ul>
                     <li>Resolved back-end tickets in a highly regulated Java Spring Boot application.</li>
-                    <li>Implemented UI fixes in JavaScript, jQuery, HTML, and CSS, enhancing overall usability and
-                        customer satisfaction.</li>
+                    <li>Implemented UI fixes in JavaScript, jQuery, HTML, and CSS, enhancing overall usability and customer satisfaction.</li>
                     <li>Automated key business processes using Python scripts, reducing new client onboarding from weeks to days.</li>
                     <li>Created automated reports from MySQL and MSSQL queries, delivering actionable insights for multiple clients.</li>
                 </ul>
@@ -85,6 +65,9 @@
 
         </section>
     </main>
+    <footer>
+        <p>&copy; 2026 Jameson Shirley</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>

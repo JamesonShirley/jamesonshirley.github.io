@@ -3,73 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projects by Jameson Shirley — Contested Space, court case management, task tracking, and more.">
     <title>Jameson Shirley | Projects</title>
-    <link rel="preload" href="styles.css" as="style">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Default background color for light mode */
-        body {
-            background-color: #f5f5f5;
-            color: #333;
-        }
-        /* Apply dark mode if preferred */
-        body.dark-mode {
-            background-color: #121212;
-            color: #f5f5f5;
-        }
-    </style>
     <script>
-        // Immediately apply dark mode if it's stored in localStorage
-        (function() {
-            if (localStorage.getItem('theme') === 'dark') {
-                document.documentElement.classList.add('dark-mode');
-                // Apply background color immediately to avoid flash
-                document.documentElement.style.backgroundColor = '#121212';
-                document.documentElement.style.color = '#f5f5f5';
-            }
-        })();
+        // Apply dark mode before paint to avoid a flash of light theme
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
     </script>
 </head>
-<body class="light-mode">
+<body>
     <header>
         <nav class="navbar">
             <a href="index.html">Home</a>
-            <a href="resume.html">Education & Work Experience</a>
-            <a href="projects.html" class="current-page">Projects</a>
-            <a href="skills.html">Skills & Certifications</a>
-            <button id="theme-toggle">Toggle Dark Mode</button>
+            <a href="resume.html">Education &amp; Work Experience</a>
+            <a href="projects.html" class="current-page" aria-current="page">Projects</a>
+            <a href="skills.html">Skills &amp; Certifications</a>
+            <button id="theme-toggle">☾ Dark Mode</button>
         </nav>
     </header>
     <main class="projects">
         <h2 class="slide-in">Projects</h2>
         <div class="project-grid fade-in">
-            <!-- Repeat this block for each project -->
-            <div class="project">
+            <div class="project card featured-project">
+                <span class="badge">Featured</span>
+                <h3>Contested Space</h3>
+                <p>A 2–4 player cooperative roguelike deckbuilding game set in a contested galaxy, developed solo in Godot 4 under Null &amp; Void Games. Players draft cards in real time from a personal market that evolves mid-combat, deploy stations for tactical bonuses, and battle across 20 incursion levels with six factions, branching star maps, and run-defining relics — all rendered in handcrafted pixel art with full Steam Deck support. Currently in playtesting with Steam wishlisting available.</p>
+                <a href="https://contested-space.com" target="_blank" rel="noopener">contested-space.com</a>
+            </div>
+            <div class="project card">
                 <h3>Court Case Management System</h3>
-                <p>A court case management system built with Python Django and JavaScript next.js. It allows for courts to schedule hearings and keep track of them in a calendar.
-                    It also allows for the creation of cases and the tracking of case information, as well as court orders and other documents. It keeps track of the parties
-                     involved in the case and the attorneys representing them.</p>
-                </p>
-                <a href="https://github.com/Modern-Court-Solutions/development" target="_blank">GitHub Repo</a>
+                <p>A court case management system built with Python Django and JavaScript Next.js. It allows courts to schedule hearings and keep track of them in a calendar. It also allows for the creation of cases and the tracking of case information, as well as court orders and other documents. It keeps track of the parties involved in the case and the attorneys representing them.</p>
+                <a href="https://github.com/Modern-Court-Solutions/development" target="_blank" rel="noopener">GitHub Repo</a>
             </div>
-            <div class="project">
-                <h3>Note and Task tracker</h3>
-                <p>
-                    This is a note and task tracker built in Python Django with vanilla JavaScript. It allows users to take notes and create tasks, connecting the two and displaying 
-                    a calander of tasks. 
-                </p>
-                <a href="https://github.com/JamesonShirley/notetasks" target="_blank">GitHub Repo</a>
+            <div class="project card">
+                <h3>Note and Task Tracker</h3>
+                <p>A note and task tracker built in Python Django with vanilla JavaScript. It allows users to take notes and create tasks, connecting the two and displaying a calendar of tasks.</p>
+                <a href="https://github.com/JamesonShirley/notetasks" target="_blank" rel="noopener">GitHub Repo</a>
             </div>
-            <div class="project">
+            <div class="project card">
                 <h3>Scheduling Application</h3>
-                <p>
-                    This application was built in java using FXML. It manages customers and appointments for a fictional business. It shows a calendar of all current appointments, 
-                    and allows for the creation of new appointments and customers. It also has a report that shows the number of appointments by type and month.
-                </p>
-                <a href="https://github.com/JamesonShirley/Scheduling-Application" target="_blank">GitHub Repo</a>
+                <p>This application was built in Java using FXML. It manages customers and appointments for a fictional business. It shows a calendar of all current appointments, and allows for the creation of new appointments and customers. It also has a report that shows the number of appointments by type and month.</p>
+                <a href="https://github.com/JamesonShirley/Scheduling-Application" target="_blank" rel="noopener">GitHub Repo</a>
             </div>
         </div>
     </main>
+    <footer>
+        <p>&copy; 2026 Jameson Shirley</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>

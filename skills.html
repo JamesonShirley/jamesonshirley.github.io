@@ -3,79 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Technical skills and certifications of Jameson Shirley, Senior Software Engineer.">
     <title>Jameson Shirley | Skills</title>
-    <link rel="preload" href="styles.css" as="style">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Default background color for light mode */
-        body {
-            background-color: #f5f5f5;
-            color: #333;
-        }
-        /* Apply dark mode if preferred */
-        body.dark-mode {
-            background-color: #121212;
-            color: #f5f5f5;
-        }
-    </style>
     <script>
-        // Immediately apply dark mode if it's stored in localStorage
-        (function() {
-            if (localStorage.getItem('theme') === 'dark') {
-                document.documentElement.classList.add('dark-mode');
-                // Apply background color immediately to avoid flash
-                document.documentElement.style.backgroundColor = '#121212';
-                document.documentElement.style.color = '#f5f5f5';
-            }
-        })();
+        // Apply dark mode before paint to avoid a flash of light theme
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
     </script>
 </head>
-<body class="light-mode">
+<body>
     <header>
         <nav class="navbar">
             <a href="index.html">Home</a>
-            <a href="resume.html">Education & Work Experience</a>
+            <a href="resume.html">Education &amp; Work Experience</a>
             <a href="projects.html">Projects</a>
-            <a href="skills.html" class="current-page">Skills & Certifications</a>
-            <button id="theme-toggle">Toggle Dark Mode</button>
-            <style>
-        /* Default background color for light mode */
-        body {
-            background-color: #f5f5f5;
-            color: #333;
-        }
-        /* Apply dark mode if preferred */
-        body.dark-mode {
-            background-color: #121212;
-            color: #f5f5f5;
-        }
-    </style>
-    <script>
-        // Immediately apply dark mode if it's stored in localStorage
-        (function() {
-            if (localStorage.getItem('theme') === 'dark') {
-                document.documentElement.classList.add('dark-mode');
-                // Apply background color immediately to avoid flash
-                document.documentElement.style.backgroundColor = '#121212';
-                document.documentElement.style.color = '#f5f5f5';
-            }
-        })();
-    </script>
+            <a href="skills.html" class="current-page" aria-current="page">Skills &amp; Certifications</a>
+            <button id="theme-toggle">☾ Dark Mode</button>
         </nav>
     </header>
     <main class="skills">
         <h2 class="slide-in">Skills</h2>
-        <section class="backend-skills fade-in">
+        <section class="backend-skills card fade-in">
             <h3>Backend Skills</h3>
-            <p>Java, Python, C++, MySQL, MSSQL, Django, Spring Boot, etc.</p>
+            <p>Java, Python, C++, MySQL, MSSQL, Django, Spring Boot, Flask, etc.</p>
         </section>
-        <section class="frontend-skills fade-in">
+        <section class="frontend-skills card fade-in">
             <h3>Frontend Skills</h3>
-            <p>JavaScript, HTML, CSS, React, JQuery, etc.</p>
+            <p>JavaScript, HTML, CSS, React, jQuery, etc.</p>
         </section>
-        <section class="tools-skills fade-in">
-            <h3>Tools & Other Skills</h3>
-            <p>AWS, Git, Docker, Agile Development, etc.</p>
+        <section class="tools-skills card fade-in">
+            <h3>Tools &amp; Other Skills</h3>
+            <p>AWS, Git, Docker, Godot, Agile Development, etc.</p>
         </section>
         <h2 class="slide-in">Certifications</h2>
         <ul class="fade-in">
@@ -85,6 +45,9 @@
             <li>ITIL4</li>
         </ul>
     </main>
+    <footer>
+        <p>&copy; 2026 Jameson Shirley</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
